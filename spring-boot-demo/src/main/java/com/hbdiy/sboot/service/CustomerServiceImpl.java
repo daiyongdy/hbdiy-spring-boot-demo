@@ -19,6 +19,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.hbdiy.sboot.model.Customer;
 
+
+
 /**
  * <b>类名称：</b>CustomerServiceImpl <br/>
  * <b>类描述：</b><br/>
@@ -33,16 +35,19 @@ import com.hbdiy.sboot.model.Customer;
 @Transactional
 public class CustomerServiceImpl implements CustomerService{
 
+
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
+
 	/**
-	 * @author daiyong1
+	 * @author daiyong
 	 */
 	@Override
 	public void add(Customer customer) {
 		String sql = "insert into customer (username, password) values (\"" + customer.getUserName() + "\", \""+ customer.getPassword() +"\")";
 		this.jdbcTemplate.execute(sql);
 	}
+
 
 }

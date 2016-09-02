@@ -37,7 +37,7 @@ public class CustomerServiceImpl implements CustomerService{
 	private JdbcTemplate jdbcTemplate;
 	
 	/**
-	 * @author daiyong
+	 * @author daiyong1
 	 */
 	@Override
 	public void add(Customer customer) {
